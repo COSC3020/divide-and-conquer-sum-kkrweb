@@ -30,8 +30,18 @@ most important part. Add your answer to this markdown file.
 RESPONSE:
 not complete
 
-//1/30/2025
+// 1/30/2025
+// Edits made prior to feedback request 1, 10 Feb 2025.
+
 
 Name: Kane Kriz
 
 Plagiarism Acknowledgement: I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+
+Citation:
+Wanted to know the deeper workings if any of JS's math.floor, 
+as well as the names of potentially relevant connected functions within the web page (i.e. math.round())
+to make sure that me treating math.floor's functionality as if it was a different language was right.
+
+“Math.floor() - JavaScript | MDN.” Developer.mozilla.org, developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor.
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor](url)
