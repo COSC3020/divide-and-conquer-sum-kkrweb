@@ -31,7 +31,9 @@ RESPONSE:
 not complete
 
 // 1/30/2025
-// Edits made prior to feedback request 1, 13 Feb 2025.
+// Edits made prior to feedback request 1, still going as of 13 Feb 2025.
+I am not good at naturally doing these runtime analyses. Love it.
+
 
 
 Name: Kane Kriz
@@ -45,3 +47,5 @@ to make sure that me treating math.floor's functionality as if it was a differen
 
 “Math.floor() - JavaScript | MDN.” Developer.mozilla.org, developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor.
 [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor](url)
+
+Solving recurrence relations resources? If I decide to eventually use any
