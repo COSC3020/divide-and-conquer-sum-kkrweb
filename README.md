@@ -88,7 +88,7 @@ After i substitutions, the recurrence relation will become $T(n) = 3^i T(n/3^i) 
 To reach the base case T(1), we need $n/3^i = 1$.
 Solving for i, i can be obersved as $i = \log_3{n}$ in order to satisfy the statement.
 
-Substituting i back into the general recurrence form, we get $T(n) = n T(1) + n \log_3{n}$.
+Substituting i back into the general recurrence form, we get $T(n) = n*T(1) + n \log_3{n}$.
 Since T(1) is a constant, this can be further simplified into $T(n) = n + n \log_3{n}$.
 
 Finally, $T(n) = n + n \log_3{n}$ can have its asymptotic theta bound determined through analyzing the dominant term within the expression.
