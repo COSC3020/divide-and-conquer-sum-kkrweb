@@ -73,14 +73,14 @@ This gives us $T(n) = 3(3T(n/9) + n/3) + n$.
 Simplifying this, we get $T(n) = 9T(n/9) + 2n$. 
 
 Here, it can be seen that the original problem of size n has been reduced to a problem of size n/9, with the additional work of 2n. 
-The additional work of 2n is solved through summing the linear work done at each level of recursion, being n via the initial relation and n/3 from the first substitution performed.
+The additional work of 2n is due to the n term from the original relation (representing the work to combine subproblems), added to another n term that is experienced when we sum the n/3 contributions from the first original performed substitution.
 
 Next, we substitute $T(n/9)$ with its recurrence relation, again continuing to attempt to break down the problem and how the problem size performs and reduces exponentialy.
 This results in $T(n) = 9(3T(n/27) + n/9) + 2n$.
-Simplifying further, we get $T(n) = 27T(n/27) + 3n + 2n = 27T(n/27) + 5n$.
+Simplifying further, we get $T(n) = 27T(n/27) + n + 2n = 27T(n/27) + 3n$.
 
-At this point, the problem size has been reduced to $n/27$, with the additional work of 5n noted. 
-The additional work of 5n is again taken by summing the linear work done at each level of recursion, being 2n from the previous step and n/9 from the second substitution.
+At this point, the problem size has been reduced to $n/27$, with the additional work of 3n noted. 
+The additional work accumulates as n*i, with i being the current of recursion.
 
 Continuing this process, we can generalize the form of the recurrence relation based upon the behavior of the reduced equations above. 
 
