@@ -118,7 +118,9 @@ to make sure that me treating math.floor's functionality as if it was a differen
 
 
 
-For substitution recurrence solving help. Some of it for the Cornell one is obviously not to applicable as your progress through the page / lecture:
+For substitution recurrence solving help.
+
+Some of it for the Cornell one is obviously not to applicable as you progress through the page / lecture:
 
 “Substitution Method to Solve Recurrence Relations.” GeeksforGeeks, 18 Mar. 2024, www.geeksforgeeks.org/substitution-method-to-solve-recurrence-relations/.
 
