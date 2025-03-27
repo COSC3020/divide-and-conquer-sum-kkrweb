@@ -55,7 +55,7 @@ For the base case handling an input array of length 0, simply 0 is returned.
 For the base case handling an input array of length 1, the single element is instead returned.
 For arrays of size 2 or greater, the function recursively solves the sum of the three subarrays and returns their combined sum, as directed within the exercise information.
 
-A recurrence relation for Divide and Conquer's $T(n)$ can be provided similar to that as was done for mergesort within the slides. 
+A recurrence relation for Divide and Conquer's T(n) can be provided similar to that as was done for mergesort within the slides. 
 For refrence, mergesort's recurrence relation is $T(n) = 2T(n/2) + n$.
 This is due to behavior of mergesort, where the array is split into two halves, each sorted recursively, and then merged, resulting in proper sorting mergesort implementation.
 This the example that was followed and solved within the slides using substitution.
@@ -63,7 +63,8 @@ This the example that was followed and solved within the slides using substituti
 For the divideAndConquerSum function, the recurrence relation is instead $T(n) = 3T(n/3) + n$, reflecting the division into three subarrays and the linear time required to combine their sums. 
 The initial relation for my Divide and Conquer implementation is given this way because at each step, the array is divided into three subarrays rather than two.
 As could be assumed, the sum of these sub arrays is computed recursively as is done with mergesort's two subarrays. 
-The additional work noted to be $n$ represents the linear time required to combine the sums of the three subarrays, scaling with the input length of the original input list provided.
+
+The additional work noted to be n represents the linear time required to combine the sums of the three subarrays, scaling with the input length of the original input list provided.
 
 To solve this recurrence relation by substitution, we start with the above initial relation $T(n) = 3T(n/3) + n$.
 
@@ -78,17 +79,23 @@ Next, we substitute $T(n/9)$ with its recurrence relation, again continuing to a
 This results in $T(n) = 9(3T(n/27) + n/9) + 2n$.
 Simplifying further, we get $T(n) = 27T(n/27) + 3n + 2n = 27T(n/27) + 5n$.
 
-At this point, the problem size has been reduced to $n/27$, with the additional work of $5n$. 
-The additional work of 5n is again taken by summing the linear work done at each level of recursion, being $2n$ from the previous step and n/9 from the second substitution.
+At this point, the problem size has been reduced to $n/27$, with the additional work of 5n noted. 
+The additional work of 5n is again taken by summing the linear work done at each level of recursion, being 2n from the previous step and n/9 from the second substitution.
 
 Continuing this process, we can generalize the form of the recurrence relation based upon the behavior of the reduced equations above. 
 
 After i substitutions, the recurrence relation will become $T(n) = 3^i T(n/3^i) + in$. 
-To reach the base case $T(1)$, we need $n/3^i = 1$.
+To reach the base case T(1), we need $n/3^i = 1$.
 Solving for i, i can be obersved as $i = \log_3{n}$ in order to satisfy the statement.
 
-Substituting i back into the general form, we get $T(n) = n T(1) + n \log_3{n}$.
-Since $T(1)$ is a constant, we can simplify this to $T(n) = n + n \log_3{n}$, which is in $θ(n \log n)$.
+Substituting i back into the general recurrence form, we get $T(n) = n T(1) + n \log_3{n}$.
+Since T(1) is a constant, this can be further simplified into $T(n) = n + n \log_3{n}$.
+
+Finally, $T(n) = n + n \log_3{n}$ can have its asymptotic theta bound determined through analyzing the dominant term within the expression.
+The term nlog3​n grows faster than the linear term n, so asymptotically the linear term n is irrelevant through finding the theta bound and the purposes requested of the exercise.
+
+Therefore, the overall growth rate of T(n) is determined by the $n log⁡_3{n}$ term.
+This means that T(n)'s determined growth rate from the $n log_3{n}$ term grows at the same rate as nlogn, due to the log base term being a constant factor that does not affect the asymptotic growth rate.
 
 So, the $T(n)$ recurrence relation can be solved to have a theta complexity of $θ(n \log n)$.
 
