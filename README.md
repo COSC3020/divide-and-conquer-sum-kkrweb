@@ -26,21 +26,29 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
+
 //
-RESPONSE:
-not complete
-
-// 1/30/2025
-// Edits made prior to feedback request 1, still going as of 13 Feb 2025.
-I am not good at naturally doing these runtime analyses. Love it.
-
-
 
 Name: Kane Kriz
 
+Start Date: 30 Jan 2025
+
+Last Edited: 26 March 2025 (waited so long as I forgot I skipped over this). 
+All other elements of the exercise besides the runtime analysis and response unchanged since mid Feb.
+
+Feedback Request 1 Date: X
+
+
+//
+
+
+RESPONSE: Incomplete
+
+//
+
 Plagiarism Acknowledgement: I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
 
-Citation:
+Citations:
 Wanted to know the deeper workings if any of JS's math.floor, 
 as well as the names of potentially relevant connected functions within the web page (i.e. math.round())
 to make sure that me treating math.floor's functionality as if it was a different language was right.
