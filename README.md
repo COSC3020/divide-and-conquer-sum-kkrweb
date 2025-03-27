@@ -42,7 +42,7 @@ Feedback Request 1 Date: X
 //
 
 
-RESPONSE: Incomplete
+RESPONSE:
 
 To determine the runtime of the implemented algorithm, first we can consider some of the step by step behavior of the implementation and functionality of particular parts of the code. 
 The function divideAndConquerSum splits the array into three sub-arrays at each divide step, rather than two as in done within merge sort. 
@@ -75,6 +75,7 @@ The additional work of 2n is solved through summing the linear work done at each
 Next, we substitute $T(n/9)$ with its recurrence relation, again continuing to attempt to break down the problem and how the problem size performs and reduces exponentialy.
 This results in $T(n) = 9(3T(n/27) + n/9) + 2n$.
 Simplifying further, we get $T(n) = 27T(n/27) + 3n + 2n = 27T(n/27) + 5n$.
+
 At this point, the problem size has been reduced to $n/27$, with the additional work of $5n$. 
 The additional work of 5n is again taken by summing the linear work done at each level of recursion, being $2n$ from the previous step and n/9 from the second substitution.
 
