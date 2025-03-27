@@ -29,13 +29,14 @@ most important part. Add your answer to this markdown file.
 
 //
 
+
 Name: Kane Kriz
 
 Start Date: 30 Jan 2025
 
-Last Edited: 26 March 2025 (waited so long as I forgot I skipped over this). 
+Last Edited: 26 March 2025 
 
-All other elements of the exercise besides the runtime analysis and response unchanged since mid Feb.
+(waited so long to finalize and submit as I forgot I skipped over the explanation and recurrence solving)
 
 Feedback Request 1 Date: X
 
@@ -95,7 +96,9 @@ So, the $T(n)$ recurrence relation can be solved to have a theta complexity of $
 //
 
 
+
 Plagiarism Acknowledgement: I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+
 
 
 Citations:
@@ -106,4 +109,10 @@ to make sure that me treating math.floor's functionality as if it was a differen
 “Math.floor() - JavaScript | MDN.” Developer.mozilla.org, developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor.
 [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor](url)
 
-Solving recurrence relations resources? If I decide to eventually use any
+
+
+For substitution recurrence solving help. Some of it for the Cornell one is obviously not to applicable as your progress through the page / lecture:
+
+“Substitution Method to Solve Recurrence Relations.” GeeksforGeeks, 18 Mar. 2024, www.geeksforgeeks.org/substitution-method-to-solve-recurrence-relations/.
+
+“Using the Substitution and Master Methods.” Www.cs.cornell.edu, www.cs.cornell.edu/courses/cs3110/2014sp/recitations/24/using-the-substitution-and-master-method.html.
