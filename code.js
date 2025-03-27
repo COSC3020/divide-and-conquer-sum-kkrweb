@@ -1,6 +1,9 @@
 // Kane Kriz
-// COSC 3020
-// 30 January 2025
+// COSC 3020 Algorithms
+// Divide and Conquer Sum Exercise
+//
+// Start Date: 30 January 2025
+// Most Recent Edits: Formatting, 26 March 2025. Functionality of the code unchanged from early Feb, when I forgot to wrap up this exercise and get it ready for feedback requesting originally.
 
 
 //
