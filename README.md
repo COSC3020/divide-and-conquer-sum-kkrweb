@@ -36,9 +36,9 @@ Start Date: 30 Jan 2025
 
 Last Edited: 26 March 2025 
 
-(waited so long to finalize and submit as I forgot I skipped over the explanation and recurrence solving)
+(waited so long to finalize and submit as I forgot I skipped over the explanation and recurrence solving in early Feb when I completed the reast of the exercise)
 
-Feedback Request 1 Date: X
+Feedback Request 1 Date: 26 March 2025
 
 
 //
