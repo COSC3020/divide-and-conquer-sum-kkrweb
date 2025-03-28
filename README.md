@@ -104,16 +104,16 @@ T(1) represents the constant work to handle the base case (returning a single el
 Solving for i, i can be observed as $i = \log_3{n}$ in order to satisfy the statement.
 
 Substituting i back into the general recurrence form, we get $T(n) = n * T(1) + c * \log_3{n}$.
-Since T(1) is a constant, this can be further simplified into $T(n) = Θ(n) + Θ(\log n) = Θ(n)$.
+Since T(1) is a constant, this can be further simplified into $T(n) \in Θ(n) + Θ(log{n}) = Θ(n)$.
 The log bases of different values are disregarded in asymptotic notation because different log bases differ only through a difference in constant factor, ignored in the context of Big Θ notation.
 
 The Θ bound is determined through analyzing the dominant term within the expression.
-The linear term n dominates the logarithmic term, so asymptotically the complexity is $Θ(n)$.
+The linear term n dominates the logarithmic term, so asymptotically the result is $T(n) \in Θ(n)$.
 
-Therefore, the overall growth rate of T(n) is linear.
+Therefore, the overall growth rate of T(n) is linear, meaning $T(n) \in Θ(n)$.
 This means the algorithm's time complexity grows at the same rate as n.
 
-So, the $T(n)$ recurrence relation can be solved to have a theta complexity of $Θ(n)$ due to this.
+So, solving the T(n) recurrence relation gives a complexity of $T(n) \in Θ(n)$.
 
 
 //
