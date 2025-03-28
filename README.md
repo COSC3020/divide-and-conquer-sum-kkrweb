@@ -44,6 +44,12 @@ Feedback Request 1 Date: 26 March 2025
 //
 
 
+Feedback Request 2 Date: 27 March 2025
+
+
+//
+
+
 RESPONSE:
 
 To determine the runtime of the implemented algorithm, first we can consider some of the step by step behavior of the implementation and functionality of particular parts of the code. 
@@ -60,44 +66,45 @@ For refrence, mergesort's recurrence relation is $T(n) = 2T(n/2) + n$.
 This is due to behavior of mergesort, where the array is split into two halves, each sorted recursively, and then merged, resulting in proper sorting mergesort implementation.
 This the example that was followed and solved within the slides using substitution.
 
-For the divideAndConquerSum function, the recurrence relation is instead $T(n) = 3T(n/3) + n$, reflecting the division into three subarrays and the linear time required to combine their sums. 
+For the divideAndConquerSum function, the recurrence relation is instead $T(n) = 3T(n/3) + O(1)$, reflecting the division into three subarrays and the constant time required to combine their sums. 
 The initial relation for my Divide and Conquer implementation is given this way because at each step, the array is divided into three subarrays rather than two.
-As could be assumed, the sum of these sub arrays is computed recursively as is done with mergesort's two subarrays. 
+As could be assumed, the sum of these subarrays is computed recursively as is done with mergesort's two subarrays. 
 
-The additional work noted to be n represents the linear time required to combine the sums of the three subarrays, scaling with the input length of the original input list provided.
+The additional work noted to be O(1) represents the constant time required to combine the sums of the three subarrays, which remains the same constant work regardless of input size. 
 
-To solve this recurrence relation by substitution, we start with the above initial relation $T(n) = 3T(n/3) + n$.
+To solve this recurrence relation by substitution, we start with the above initial relation $T(n) = 3T(n/3) + O(1)$.
 
-First, we substitute $T(n/3)$ with its own recurrence relation of $3T(n/9)$, in an attempt to break down the recurrence relation further (as desired for the substitution method).
-This gives us $T(n) = 3(3T(n/9) + n/3) + n$.
-Simplifying this, we get $T(n) = 9T(n/9) + 2n$. 
+First, we substitute $T(n/3)$ with its own recurrence relation of $3T(n/9) + O(1)$, in an attempt to break down the recurrence relation further (as desired for the substitution method).
+This gives us $T(n) = 3(3T(n/9) + O(1)) + O(1)$.
+Simplifying this, we get $T(n) = 9T(n/9) + O(1)$.
 
-Here, it can be seen that the original problem of size n has been reduced to a problem of size n/9, with the additional work of 2n. 
-The additional work of 2n is due to the n term from the original relation (representing the work to combine subproblems), added to another n term that is experienced when we sum the n/3 contributions from the first original performed substitution.
+Here, it can be seen that the original problem of size n has been reduced to a problem of size n/9, with constant additional work O(1).
+The constant additional work comes from the O(1) term in the original relation (representing the constant combination time of subproblem solutions).
 
-Next, we substitute $T(n/9)$ with its recurrence relation, again continuing to attempt to break down the problem and how the problem size performs and reduces exponentialy.
-This results in $T(n) = 9(3T(n/27) + n/9) + 2n$.
-Simplifying further, we get $T(n) = 27T(n/27) + n + 2n = 27T(n/27) + 3n$.
+Next, we substitute $T(n/9)$ with its recurrence relation, again continuing to attempt to break down the problem and how the problem size performs and reduces exponentially.
+This results in $T(n) = 9(3T(n/27) + O(1)) + O(1)$.
+Simplifying further, we get $T(n) = 27T(n/27) + O(1)$.
 
-At this point, the problem size has been reduced to $n/27$, with the additional work of 3n noted. 
-The additional work accumulates as n*i, with i being the current of recursion.
+At this point, the problem size has been reduced to $n/27$, with only constant additional work O(1) accumulated.
+The work accumulates as i*O(1), with i being the current depth of recursion.
 
-Continuing this process, we can generalize the form of the recurrence relation based upon the behavior of the reduced equations above. 
+Continuing this process, we can generalize the form of the recurrence relation based upon the behavior of the reduced equations above.
 
-After i substitutions, the recurrence relation will become $T(n) = 3^i T(n/3^i) + in$. 
+After i substitutions, the recurrence relation will become $T(n) = 3^i T(n/3^i) + i * O(1)$.
 To reach the base case T(1), we need $n/3^i = 1$.
-Solving for i, i can be obersved as $i = \log_3{n}$ in order to satisfy the statement.
+Solving for i, i can be observed as $i = \log_3{n}$ in order to satisfy the statement.
 
-Substituting i back into the general recurrence form, we get $T(n) = n*T(1) + n \log_3{n}$.
-Since T(1) is a constant, this can be further simplified into $T(n) = n + n \log_3{n}$.
+Substituting i back into the general recurrence form, we get $T(n) = n * T(1) + O(1) * \log_3{n}$.
+Since T(1) is a constant, this can be further simplified into $T(n) = O(n) + O(\log n) = O(n)$. 
+The log bases of different values are disregarded in asymptotic notation because different log bases differ only through a difference in constant factor, ignored in the context of Big O notation.
 
-Finally, $T(n) = n + n \log_3{n}$ can have its asymptotic theta bound determined through analyzing the dominant term within the expression.
-The term nlog3​n grows faster than the linear term n, so asymptotically the linear term n is irrelevant through finding the theta bound and the purposes requested of the exercise.
+Finally, $T(n) = O(n)$ can have its asymptotic theta bound determined through analyzing the dominant term within the expression.
+The linear term n dominates the logarithmic term, so asymptotically the complexity is $θ(n)$.
 
-Therefore, the overall growth rate of T(n) is determined by the $n log⁡_3{n}$ term.
-This means that T(n)'s determined growth rate from the $n log_3{n}$ term grows at the same rate as nlogn, due to the log base term being a constant factor that does not affect the asymptotic growth rate.
+Therefore, the overall growth rate of T(n) is linear.
+This means the algorithm's time complexity grows at the same rate as n.
 
-So, the $T(n)$ recurrence relation can be solved to have a theta complexity of $θ(n \log n)$.
+So, the $T(n)$ recurrence relation can be solved to have a theta complexity of $θ(n)$ due to this.
 
 
 //
